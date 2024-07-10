@@ -73,8 +73,8 @@ github.com/grpc-ecosystem/grpc-gateway v1.16.0 h1:gmcG1KaJ57LophUzW0Hy8NmPhnMZb4
 github.com/grpc-ecosystem/grpc-gateway v1.16.0/go.mod h1:BDjrQk3hbvj6Nolgz8mAMFbcEtjT1g+wF4CSlocrBnw=
 github.com/grpc-ecosystem/grpc-gateway/v2 v2.16.0 h1:YBftPWNWd4WwGqtY2yeZL2ef8rHAxPBD8KFhJpmcqms=
 github.com/grpc-ecosystem/grpc-gateway/v2 v2.16.0/go.mod h1:YN5jB8ie0yfIUg6VvR9Kz84aCaG7AsGZnLjhHbUqwPg=
-github.com/haircommander/api v0.0.0-20240710164816-322e78cc272a h1:G6fF7jVuSTCRHB3SU+IwiCxN5HsBGg3V1LXBTwSuQSM=
-github.com/haircommander/api v0.0.0-20240710164816-322e78cc272a/go.mod h1:OOh6Qopf21pSzqNVCB5gomomBXb8o5sGKZxG2KNpaXM=
+github.com/haircommander/api v0.0.0-20240710194531-579c75d78a4c h1:cGy1N0IJnJcCkBD6Tr5wsYTuw2oDrfYWvLHQ6W3q65A=
+github.com/haircommander/api v0.0.0-20240710194531-579c75d78a4c/go.mod h1:CxgbWAlvu2iQB0UmKTtRu1YfepRg1/vJ64n2DlIEVz4=
 github.com/haircommander/kubernetes v0.0.0-20240710193504-9a500f5974f8 h1:g2dqzgj/yKY0k9osmbeqQDun6ulPpw716o6fxWxKj0A=
 github.com/haircommander/kubernetes v0.0.0-20240710193504-9a500f5974f8/go.mod h1:9kztbUQf9stVDcIYXx+BX3nuGCsAQDsuClkGMpPs3pA=
 github.com/jonboulle/clockwork v0.2.2 h1:UOGuzwb1PwsrDAObMuhUnj0p5ULPj8V/xJ7Kx9qUBdQ=

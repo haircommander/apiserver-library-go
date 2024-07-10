@@ -79,6 +79,6 @@ require (
 )
 
 replace (
-	github.com/openshift/api => github.com/haircommander/api v0.0.0-20240710164816-322e78cc272a // indirect
+	github.com/openshift/api => github.com/haircommander/api v0.0.0-20240710194531-579c75d78a4c // indirect
 	k8s.io/kubernetes => github.com/haircommander/kubernetes v0.0.0-20240710193504-9a500f5974f8 // indirect
 )
