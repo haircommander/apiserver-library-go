@@ -281,13 +281,10 @@ func (s *simpleProvider) ValidatePodSecurityContext(pod *api.Pod, fldPath *field
 		allErrs = append(allErrs, field.Invalid(fldPath.Child("hostIPC"), sc.HostIPC(), "Host IPC is not allowed to be used"))
 	}
 
-<<<<<<< HEAD
-=======
-	if s.scc.HostUsers == securityv1.HostUsersStrategyDisallowed && *sc.HostUsers() {
+	if s.scc.UserNamespaceLevel == securityv1.NamespaceLevelRequirePod && *sc.HostUsers() {
 		allErrs = append(allErrs, field.Invalid(fldPath.Child("hostUsers"), sc.HostUsers(), "Host Users is not allowed to be used"))
 	}
 
->>>>>>> 8b31a0fe1 (s)
 	allErrs = append(allErrs, s.sysctlsStrategy.Validate(pod)...)
 
 	if len(pod.Spec.Volumes) > 0 && !sccutil.SCCAllowsAllVolumes(s.scc) {
@@ -367,6 +364,15 @@ func (s *simpleProvider) ValidateContainerSecurityContext(pod *api.Pod, containe
 
 	if !s.scc.AllowHostIPC && podSC.HostIPC() {
 		allErrs = append(allErrs, field.Invalid(fldPath.Child("hostIPC"), podSC.HostIPC(), "Host IPC is not allowed to be used"))
+	}
+
+	if s.scc.UserNamespaceLevel == securityv1.NamespaceLevelRequirePod {
+		hostUsers := podSC.HostUsers()
+		if hostUsers == nil {
+			allErrs = append(allErrs, field.Invalid(fldPath.Child("hostUsers"), *podSC.HostUsers(), "Host Users may not be nil and must be set to false"))
+		} else if *hostUsers {
+			allErrs = append(allErrs, field.Invalid(fldPath.Child("hostUsers"), *podSC.HostUsers(), "Host Users is not allowed to be set to true"))
+		}
 	}
 
 	if s.scc.ReadOnlyRootFilesystem {
