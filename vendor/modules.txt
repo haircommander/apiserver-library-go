@@ -820,7 +820,7 @@ k8s.io/kube-openapi/pkg/util
 k8s.io/kube-openapi/pkg/util/proto
 k8s.io/kube-openapi/pkg/util/sets
 k8s.io/kube-openapi/pkg/validation/spec
-# k8s.io/kubernetes v1.29.0
+# k8s.io/kubernetes v1.29.0 => github.com/haircommander/kubernetes v0.0.0-20240710193504-9a500f5974f8
 ## explicit; go 1.21
 k8s.io/kubernetes/pkg/api/legacyscheme
 k8s.io/kubernetes/pkg/api/v1/pod
@@ -877,3 +877,4 @@ sigs.k8s.io/structured-merge-diff/v4/value
 ## explicit; go 1.12
 sigs.k8s.io/yaml
 # github.com/openshift/api => github.com/haircommander/api v0.0.0-20240710164816-322e78cc272a
+# k8s.io/kubernetes => github.com/haircommander/kubernetes v0.0.0-20240710193504-9a500f5974f8
